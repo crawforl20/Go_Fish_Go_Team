@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public class TextModActivity extends ActionBarActivity {
 
     // instance variables containing widgets
     private ImageView imageView; // the view that shows the image
+    private EditText lText;
 
     /**
      * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -40,6 +42,7 @@ public class TextModActivity extends ActionBarActivity {
 
         // set instance variables for our widgets
         imageView = (ImageView)findViewById(R.id.imageView);
+        lText = (EditText)findViewById(R.id.editText);
 
         // Set up the spinner so that it shows the names in the spinner array resources
         //
@@ -101,6 +104,16 @@ public class TextModActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public boolean lowerCase (View v){
+
+        String lString = lText.getText().toString();
+        lString = lString.toLowerCase();
+        lText.setText(lString);
+        return true;
+
+
     }
 
     /**

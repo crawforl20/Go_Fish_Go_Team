@@ -98,7 +98,8 @@
             android:background="@color/button_color"
             android:text="@string/lower_button_text"
             android:textColor="@color/button_text_color"
-            android:textSize="@dimen/button_font_size" />
+            android:textSize="@dimen/button_font_size"
+            android:onClick="lowerCase"/>
 
         <Space
             android:layout_width="0sp"
